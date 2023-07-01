@@ -138,7 +138,7 @@ public class booking extends javax.swing.JFrame {
         try {
             dbconnector.statement = dbconnector.connection.createStatement();
             dbconnector.statement.execute(sql1);
-        } catch (Exception e) {
+        } catch (SQLException e) {
             JOptionPane.showMessageDialog(null, "sudah dibooking sebelumnya");
             return;
         }
@@ -148,7 +148,7 @@ public class booking extends javax.swing.JFrame {
         try {
             x.statement = x.connection.createStatement();
             x.statement.execute(sql2);
-        } catch (Exception e) {
+        } catch (SQLException e) {
         }
 
     }

@@ -31,9 +31,9 @@ public class menuutama extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel1.setText("WELCOME TO THE TICKET BOOKING APP");
+        jLabel1.setText("     WELCOME TO THE TICKET BOOKING APP");
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel2.setText("Minna Cicilan Studio");
+        jLabel2.setText("                 MSA CINEMA");
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton1.setText("STUDIO 1");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
