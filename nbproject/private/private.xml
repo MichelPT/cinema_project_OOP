@@ -3,9 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/LENOVO/Documents/NetBeansProjects/bioskopku/src/model/paymentModel.java</file>
             <file>file:/C:/Users/LENOVO/Documents/NetBeansProjects/bioskopku/src/bioskopku/booking.java</file>
-            <file>file:/C:/Users/LENOVO/Documents/NetBeansProjects/bioskopku/src/bioskopku/movies.java</file>
+            <file>file:/C:/Users/LENOVO/Documents/NetBeansProjects/bioskopku/src/bioskopku/studioCode.java</file>
+            <file>file:/C:/Users/LENOVO/Documents/NetBeansProjects/bioskopku/src/bioskopku/Main.java</file>
+            <file>file:/C:/Users/LENOVO/Documents/NetBeansProjects/bioskopku/src/view/paymentView.java</file>
             <file>file:/C:/Users/LENOVO/Documents/NetBeansProjects/bioskopku/src/bioskopku/studio.java</file>
+            <file>file:/C:/Users/LENOVO/Documents/NetBeansProjects/bioskopku/src/controller/paymentController.java</file>
         </group>
     </open-files>
 </project-private>

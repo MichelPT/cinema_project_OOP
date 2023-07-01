@@ -5,6 +5,7 @@
 package model;
 
 import bioskopku.dbconnector;
+import bioskopku.studioCode;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
@@ -14,7 +15,8 @@ import java.sql.SQLException;
  */
 public class paymentModel extends dbconnector {
 
-    int count;
+    private int count;
+    private int price;
 
     public boolean detectBooking() {
         try {
@@ -59,6 +61,21 @@ public class paymentModel extends dbconnector {
             }
             seats = builder.toString();
             statement.close();
+            switch (studioNum) {
+                case 1 -> {
+                    studioCode studio = studioCode.Atrium;
+                    price = studio.getPrice();
+                }
+                case 2 -> {
+                    studioCode studio = studioCode.Spherex;
+                    price = studio.getPrice();
+                }
+                case 3 -> {
+                    studioCode studio = studioCode.Galaxy;
+                    price = studio.getPrice();
+                }
+                default -> throw new AssertionError();
+            }
         } catch (SQLException e) {
             System.out.println(e + " di getseats");
         }
@@ -66,7 +83,7 @@ public class paymentModel extends dbconnector {
     }
 
     public int totalBill() {
-        int total = 35000 * this.count;
+        int total = this.price * this.count;
         return total;
     }
 
@@ -75,6 +92,7 @@ public class paymentModel extends dbconnector {
             String sql = "SELECT * FROM `studio` WHERE `studioId`=" + studioNumber;
             statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(sql);
+            
             if (resultSet.next()) {
                 return resultSet.getString("movieName");
             } else {

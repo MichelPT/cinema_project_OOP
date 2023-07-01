@@ -15,6 +15,7 @@ import javax.swing.JOptionPane;
 public class studio extends javax.swing.JFrame {
 
     int studioNum;
+    private String stdcode;
 
     /**
      * Creates new form studio
@@ -112,7 +113,22 @@ public class studio extends javax.swing.JFrame {
         jButton37 = new javax.swing.JButton();
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
-        jLabel1.setText("Screen " + studioNum);
+        switch (studioNum) {
+            case 1 -> {
+            studioCode studio = studioCode.Atrium;
+            stdcode = studio.toString();
+            } 
+            case 2 -> {
+            studioCode studio = studioCode.Spherex;
+            stdcode = studio.toString();
+            }
+            case 3 -> {
+            studioCode studio = studioCode.Galaxy;
+            stdcode = studio.toString();
+            }
+            default -> throw new AssertionError();
+        }
+        jLabel1.setText(stdcode);
         jButton1.setText("A1");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

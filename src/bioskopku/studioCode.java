@@ -12,7 +12,6 @@ public enum studioCode {
     Atrium(35000), Spherex(40000), Galaxy(25000);
     
     private final int price;
-    
     private studioCode(int price){
     this.price= price;
     }
@@ -20,5 +19,4 @@ public enum studioCode {
     public int getPrice() {
         return price;
     }
-
 }

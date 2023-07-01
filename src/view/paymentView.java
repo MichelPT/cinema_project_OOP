@@ -40,7 +40,7 @@ public class paymentView extends javax.swing.JFrame {
         movieName = new javax.swing.JLabel();
         studioNum = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        priceperseat = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         seats = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
@@ -67,8 +67,7 @@ public class paymentView extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         jLabel6.setText("Studio No.         :");
 
-        jLabel7.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
-        jLabel7.setText("Rp 35.000");
+        priceperseat.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
 
         jLabel8.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         jLabel8.setText("Price per Seat   :");
@@ -109,7 +108,7 @@ public class paymentView extends javax.swing.JFrame {
                             .addComponent(totalBill, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(studioNum, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(movieName, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(priceperseat, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(seats, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(25, 25, 25))))
             .addGroup(layout.createSequentialGroup()
@@ -144,7 +143,7 @@ public class paymentView extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel8)
-                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(priceperseat, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel10)
@@ -172,10 +171,10 @@ public class paymentView extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel movieName;
     private javax.swing.JButton pay;
+    private javax.swing.JLabel priceperseat;
     private javax.swing.JLabel seats;
     private javax.swing.JLabel studioNum;
     private javax.swing.JLabel totalBill;
@@ -209,6 +208,10 @@ public class paymentView extends javax.swing.JFrame {
     
     public JLabel getTotalLabel(){
         return totalBill;
+    }
+    
+    public JLabel getPrice(){
+        return priceperseat;
     }
 
 }
