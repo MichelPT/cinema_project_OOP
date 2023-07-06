@@ -12,6 +12,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 import model.paymentModel;
 import view.paymentView;
+import javax.swing.SwingWorker;
 
 /**
  *
@@ -34,19 +35,22 @@ public class paymentController implements ActionListener {
             view.noBooking(studioNum);
         } else {
             switch (studioNum) {
-                case 1 -> {
+                case 1:{
                     studioCode studio = studioCode.Atrium;
                     price = studio.getPrice();
+                    break;
                 }
-                case 2 -> {
+                case 2:{
                     studioCode studio = studioCode.Spherex;
                     price = studio.getPrice();
+                    break;
                 }
-                case 3 -> {
+                case 3:{
                     studioCode studio = studioCode.Galaxy;
                     price = studio.getPrice();
+                    break;
                 }
-                default ->
+                default:
                     throw new AssertionError();
             }
             priceString = String.valueOf(price);
@@ -66,10 +70,17 @@ public class paymentController implements ActionListener {
             view.dispose();
             new pilihan(studioNum).setVisible(true);
         } else {
-            int tickets = model.setSeatsPaid(studioNum);
-            JOptionPane.showMessageDialog(null, "Your payment for " + tickets + " tickets has been processed successfully!");
-            view.dispose();
-            new menuutama().setVisible(true);
+            SwingWorker<Void, Void> worker = new SwingWorker<Void, Void>() {
+                @Override
+                protected Void doInBackground() throws Exception {
+                    int tickets = model.setSeatsPaid(studioNum);
+                    JOptionPane.showMessageDialog(null, "Your payment for " + tickets + " tickets has been processed successfully!");
+                    view.dispose();
+                    new menuutama().setVisible(true);
+                    return null;
+                }
+            };
+            worker.execute(); // Start the SwingWorker in the background
         }
 //        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
